@@ -27,17 +27,20 @@ export default function HomeSection() {
     >
       {/* ロゴ */}
       <Box
-        component="img"
-        src="/logo2.png" // ロゴ画像のパス
-        alt="UM Logo"
-        sx={{
-          height: 850, // ロゴのサイズ
-          width: 'auto',
-          marginTop: 2, // 位置を下げる
-          marginBottom: 2,
-          // animation: 'fadeIn 1s ease-in-out', // フェードインアニメーション
-        }}
-      />
+      component="img"
+      src="/logo2.png" // ロゴ画像のパス
+      alt="UM Logo"
+      sx={{
+        height: { xs: 300, sm: 500, md: 850 }, // デバイスごとの高さ
+        width: 'auto', // 横幅は自動調整
+        marginTop: 2, // 上の余白
+        marginBottom: 2, // 下の余白
+        display: 'block', // 中央に配置するための設定
+        marginLeft: 'auto',
+        marginRight: 'auto',
+  }}
+/>
+
 
       {/* タイトル */}
       <Typography
