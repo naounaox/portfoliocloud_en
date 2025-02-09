@@ -31,10 +31,10 @@ export default function HomeSection() {
       src="/logo2.png" // ロゴ画像のパス
       alt="UM Logo"
       sx={{
-        height: { xs: 300, sm: 500, md: 850 }, // デバイスごとの高さ
+        height: { xs: 350, sm: 600, md: 850 }, // デバイスごとの高さ
         width: 'auto', // 横幅は自動調整
-        marginTop: 2, // 上の余白
-        marginBottom: 2, // 下の余白
+        marginTop: { xs: 0, sm: 2, md: 2 }, // 上の余白
+        marginBottom: { xs: 5, sm: 2, md: 2 }, // 下の余白
         display: 'block', // 中央に配置するための設定
         marginLeft: 'auto',
         marginRight: 'auto',
