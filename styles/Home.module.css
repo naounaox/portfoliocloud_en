@@ -1,0 +1,69 @@
+/* 共通設定 */
+.body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth; /* スムーズスクロール */
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* セクションごとの背景色 */
+.home {
+  background-color: #FFFEF4;
+}
+
+.about {
+  background-color: #FFFEF4;
+}
+
+.works {
+  background-color: #FFFEF4;
+}
+
+.contact {
+  background-color: #FFFEF4;
+}
+
+/* ヘッダーのスタイル */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #202020;
+  color: #FFFEF4;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* フッターのスタイル */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: white;
+}

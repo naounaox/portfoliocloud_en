@@ -1,0 +1,47 @@
+body {
+  font-family: 'Murecho', sans-serif;
+  background-color: #FFFEF4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  cursor: url('/custom-cursor.png'), auto;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #202020;
+  color: #FFFEF4;
+  padding: 1rem 0;
+}
+.main {
+  padding: 2rem;
+}
+.section {
+  margin-bottom: 3rem;
+}
+p {
+  word-wrap: break-word; 
+  white-space: normal;   
+}
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
