@@ -5,12 +5,12 @@ export default function HomeSection() {
 
   const [showJapanese, setShowJapanese] = useState(false);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setShowJapanese(true); // 0.5秒後に日本語に切り替える
-  //   }, 500); // 0.5秒の遅延
-  //   return () => clearTimeout(timer);
-  // }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowJapanese(true); // 0.5秒後に日本語に切り替える
+    }, 500); // 0.5秒の遅延
+    return () => clearTimeout(timer);
+  }, []);
 
 
   return (
