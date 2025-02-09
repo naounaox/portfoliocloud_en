@@ -22,7 +22,7 @@ export default function Header() {
           sx={{
             fontFamily: 'Shadows Into Light, cursive', // フォントをReenie Beanieに
             textAlign: 'center',
-            fontSize: '4rem',
+            fontSize: { xs: '1.5rem', sm: '2rem', md: '4rem' },
             letterSpacing: '0.07em',
           }}
         >

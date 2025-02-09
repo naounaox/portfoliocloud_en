@@ -47,7 +47,7 @@ export default function ContactSection() {
   gutterBottom
   sx={{
     fontFamily: "Shadows Into Light, cursive",
-    fontSize: "8rem", // 文字を大きく
+    fontSize: { xs: '3rem', sm: '5rem', md: '8rem' }, // 文字を大きく
   }}
 >
   CONTACT
