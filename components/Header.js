@@ -21,7 +21,7 @@ export default function Header() {
       sx={{
         backgroundColor: '#202020', // 背景色をダークグレーに
         color: '#FFFEF4', // テキストを白に
-        height: { xs: '64px', sm: '80px' }, // ヘッダーの高さ
+        height: { xs: '70px', sm: '80px', md: '100px'}, // ヘッダーの高さ
       }}
     >
       <Toolbar
