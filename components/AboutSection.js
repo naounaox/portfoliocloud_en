@@ -41,9 +41,9 @@ export default function AboutSection() {
   }}
 
 >
-Hello! I'm JUSTNAO, a web designer and developer with experience creating engaging and memorable designs.
+Hello! I&apos;m JUSTNAO, a web designer and developer with experience creating engaging and memorable designs.
 My skillset includes C++ programming, web development with React and Next.js, and API integration.
-I'm comfortable communicating in business English and always focus on creating clear, visually appealing designs.
+I&apos;m comfortable communicating in business English and always focus on creating clear, visually appealing designs.
 My goal is to bring your vision to life with sincerity, creativity, and efficiency.
         </Typography>
       </Container>
