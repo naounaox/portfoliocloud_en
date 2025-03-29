@@ -4,10 +4,10 @@ import '../styles/globals.css';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2',
+      main: '#202020',
     },
     secondary: {
-      main: '#ff4081',
+      main: '#FFFEF4',
     },
   },
   typography: {

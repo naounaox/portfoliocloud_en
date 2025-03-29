@@ -40,14 +40,14 @@ export default function Header() {
         <Typography
           variant="h4"
           sx={{
-            fontFamily: 'Shadows Into Light, cursive',
+            fontFamily: 'Luckiest Guy',
             textAlign: 'center',
             fontSize: { xs: '2rem', sm: '3rem', md: '4rem' },
             letterSpacing: '0.07em',
             whiteSpace: 'nowrap',
           }}
         >
-          UM Portfolio
+          JUSTNAO Portfolio
         </Typography>
 
         {/* 右側のPC用ナビゲーション（スマホでは非表示） */}

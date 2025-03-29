@@ -9,8 +9,8 @@ body {
 
 header, footer {
   text-align: center;
-  background-color: #202020;
-  color: #FFFEF4;
+  background-color: #FFFEF4;
+  color: #202020;
   padding: 1rem 0;
 }
 .main {
@@ -24,24 +24,41 @@ p {
   white-space: normal;   
 }
 
-/* @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px); 
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); 
-  }
-} */
+.animated-path {
+  stroke-dasharray: 3000;      /* ロゴの長さに合わせて調整 */
+  stroke-dashoffset: 3000;
+  animation: drawLine 3s ease forwards;
+}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
+@keyframes drawLine {
   to {
-    opacity: 1;
-    transform: translateY(0);
+    stroke-dashoffset: 0;
   }
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-1px, 1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes flash {
+  0% {
+    color: yellow;
+    text-shadow: 0 0 10px yellow, 0 0 20px orange;
+  }
+  100% {
+    color: #202020;
+    text-shadow: none;
+  }
+}
+
+.flash {
+  animation: flash 0.4s ease-in-out;
 }

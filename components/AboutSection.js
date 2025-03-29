@@ -2,8 +2,6 @@ import { Box, Container, Typography } from '@mui/material';
 import { useState } from 'react';
 
 export default function AboutSection() {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <Box
       id="about"
@@ -12,7 +10,7 @@ export default function AboutSection() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        bgcolor: '#FFFEF4',
+        bgcolor: '#202020',
       }}
     >
       <Container>
@@ -21,8 +19,9 @@ export default function AboutSection() {
   align="center"
   gutterBottom
   sx={{
-    fontFamily: "Shadows Into Light, cursive",
+    fontFamily: "Luckiest Guy, sans-serif", // フォントをLuckiest Guyに変更
     fontSize: { xs: '3rem', sm: '5rem', md: '8rem' }, // 文字を大きく
+    color: '#FFFEF4', // 文字色を白
   }}
 >
   ABOUT
@@ -30,26 +29,23 @@ export default function AboutSection() {
 <Typography
   variant="h2"
   sx={{
-    fontFamily: isHovered
-      ? 'DM Sans, cursive' // ホバー時のフォント
-      : 'Kosugi Maru, sans-serif', // 通常時のフォント
-    fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' }, // デバイス幅ごとのフォントサイズ
+    fontFamily: 
+       'Montserrat, sans-serif', // 通常時のフォント
+    fontSize: { xs: '1.255rem', sm: '1.6rem', md: '2.2rem' }, // デバイス幅ごとのフォントサイズ
     textAlign: 'center',
     lineHeight: 1.8,
     transition: 'opacity 0.3s ease, font-family 0.3s ease', // スムーズな切り替え
-    maxWidth: '800px', // テキストの最大幅
+    maxWidth: '1200px', // テキストの最大幅
     margin: '0 auto', // 中央揃え
+    color: '#FFFEF4', // 文字色を白
   }}
-  onMouseEnter={() => setIsHovered(true)} // ホバー時の処理
-  onMouseLeave={() => setIsHovered(false)} // ホバー解除時の処理
->
-  {isHovered
-    ? `Hello! I'm UM.
-I leverage my experience from studying at a design university to specialize in creating fun, memorable designs. My technical projects include software development using C++, website creation with React, and API integration. I’m also capable of business-level communication in English. Additionally, I excel at logo creation and visual design, helping clients showcase their unique appeal to the fullest.`
-    : `こんにちは！UMです。
-私はデザイン系の大学で学んだ経験を活かし、ポップで心に残るデザインを得意としています。これまでに C++を使用したソフトウェア開発 や Reactを使ったウェブサイト制作、API連携の実装 といった技術的なプロジェクトに携わってきました。また、ビジネス英語でのコミュニケーションも可能です。特にロゴ制作やビジュアルデザインにも力を入れており、クライアント様の魅力を最大限に引き出すお手伝いをしています。`}
-</Typography>
 
+>
+Hello! I'm JUSTNAO, a web designer and developer with experience creating engaging and memorable designs.
+My skillset includes C++ programming, web development with React and Next.js, and API integration.
+I'm comfortable communicating in business English and always focus on creating clear, visually appealing designs.
+My goal is to bring your vision to life with sincerity, creativity, and efficiency.
+        </Typography>
       </Container>
     </Box>
   );

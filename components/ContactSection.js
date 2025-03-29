@@ -37,7 +37,7 @@ export default function ContactSection() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        bgcolor: '#FFFEF4',
+        bgcolor: '#202020',
       }}
     >
       <Container>
@@ -46,8 +46,9 @@ export default function ContactSection() {
   align="center"
   gutterBottom
   sx={{
-    fontFamily: "Shadows Into Light, cursive",
+    fontFamily: "Luckiest Guy", // フォントをLuckiest Guyに変更
     fontSize: { xs: '3rem', sm: '5rem', md: '8rem' }, // 文字を大きく
+    color: '#FFFEF4', // 文字色を白
   }}
 >
   CONTACT
@@ -60,47 +61,68 @@ export default function ContactSection() {
             flexDirection: 'column',
             gap: 2,
             maxWidth: 600,
+            bgcolor: '#FFFEF4',
+            p: 3,
             mx: 'auto',
+            borderRadius: 2, // 角を丸くする
           }}
         >
           <TextField
             fullWidth
             name="name"
-            label="お名前"
+            label="Name"
             variant="outlined"
             required
+            InputProps={{
+              sx: { fontFamily: 'Montserrat, sans-serif' }, // 入力テキストのフォント
+            }}
+            InputLabelProps={{
+              sx: { fontFamily: 'Montserrat, sans-serif' }, // ラベルのフォント
+            }}
           />
           <TextField
             fullWidth
             name="email"
-            label="メールアドレス"
+            label="Email Address"
             variant="outlined"
             type="email"
             required
+            InputProps={{
+              sx: { fontFamily: 'Montserrat, sans-serif' }, // 入力テキストのフォント
+            }}
+            InputLabelProps={{
+              sx: { fontFamily: 'Montserrat, sans-serif' }, // ラベルのフォント
+            }}
           />
           <TextField
             fullWidth
             name="message"
-            label="メッセージ"
+            label="Message"
             variant="outlined"
             multiline
             rows={4}
             required
+            InputProps={{
+              sx: { fontFamily: 'Montserrat, sans-serif' }, // 入力テキストのフォント
+            }}
+            InputLabelProps={{
+              sx: { fontFamily: 'Montserrat, sans-serif' }, // ラベルのフォント
+            }}
           />
           <Button type="submit" variant="contained" color="primary">
-            送信
+            SEND
           </Button>
         </Box>
 
         {/* 状態によるメッセージ表示 */}
         {status === 'success' && (
           <Typography color="green" align="center" mt={2}>
-            送信成功しました。お問い合わせありがとうございます！
+          Your message has been sent successfully. Thank you for contacting us!
           </Typography>
         )}
         {status === 'error' && (
           <Typography color="red" align="center" mt={2}>
-            エラーが発生しました。もう一度お試しください。
+            An error occurred. Please try again.
           </Typography>
         )}
       </Container>

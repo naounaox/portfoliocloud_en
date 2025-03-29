@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         {/* フォントの読み込み */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Kosugi+Maru&family=DM+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Kosugi+Maru&family=Montserrat&family=Luckiest+Guy&family=DM+Sans&display=swap"
           rel="stylesheet"
         />
         {/* ビューポートの設定 */}
