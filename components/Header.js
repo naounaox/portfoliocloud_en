@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu'; // 三本線アイコン
+import Head from 'next/head';
 
 export default function Header() {
   const [open, setOpen] = useState(false); // メニューの開閉状態
@@ -16,69 +17,78 @@ export default function Header() {
   };
 
   return (
-    <AppBar
-      position="fixed"
-      sx={{
-        backgroundColor: '#202020', // 背景色をダークグレーに
-        color: '#FFFEF4', // テキストを白に
-        height: { xs: '70px', sm: '80px', md: '100px'}, // ヘッダーの高さ
-      }}
-    >
-      <Toolbar
+    <>
+      <Head>
+        <title>JUSTNAO Portfolio</title>
+        <meta
+          name="description"
+          content="Want a cool website? Hit me up at JUSTNAO! - Welcome to JUSTNAO's official website."
+        />
+      </Head>
+      <AppBar
+        position="fixed"
         sx={{
-          justifyContent: 'space-between',
-          px: { xs: 2, sm: 4 }, // スマホでは左右の余白を調整
+          backgroundColor: '#202020', // 背景色をダークグレーに
+          color: '#FFFEF4', // テキストを白に
+          height: { xs: '70px', sm: '80px', md: '100px' }, // ヘッダーの高さ
         }}
       >
-        {/* PC用のナビゲーション（スマホでは非表示） */}
-        <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 2 }}>
-          <Button color="inherit" href="#about">ABOUT</Button>
-          <Button color="inherit" href="#works">WORKS</Button>
-        </Box>
-
-        {/* 中央のテキスト（Shadows Into Light） */}
-        <Typography
-          variant="h4"
+        <Toolbar
           sx={{
-            fontFamily: 'Luckiest Guy',
-            textAlign: 'center',
-            fontSize: { xs: '2rem', sm: '3rem', md: '4rem' },
-            letterSpacing: '0.07em',
-            whiteSpace: 'nowrap',
+            justifyContent: 'space-between',
+            px: { xs: 2, sm: 4 }, // スマホでは左右の余白を調整
           }}
         >
-          JUSTNAO Portfolio
-        </Typography>
+          {/* PC用のナビゲーション（スマホでは非表示） */}
+          <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 2 }}>
+            <Button color="inherit" href="#about">ABOUT</Button>
+            <Button color="inherit" href="#works">WORKS</Button>
+          </Box>
 
-        {/* 右側のPC用ナビゲーション（スマホでは非表示） */}
-        <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 2 }}>
-          <Button color="inherit" href="#contact">CONTACT</Button>
-          <Button color="inherit" href="#home">HOME</Button>
-        </Box>
+          {/* 中央のテキスト（Shadows Into Light） */}
+          <Typography
+            variant="h4"
+            sx={{
+              fontFamily: 'Luckiest Guy',
+              textAlign: 'center',
+              fontSize: { xs: '2rem', sm: '3rem', md: '4rem' },
+              letterSpacing: '0.07em',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            JUSTNAO Portfolio
+          </Typography>
 
-        {/* スマホ用のハンバーガーメニュー（PCでは非表示） */}
-        <IconButton
-          color="inherit"
-          aria-label="menu"
-          sx={{ display: { xs: 'block', sm: 'none' } }}
-          onClick={handleDrawerOpen}
-        >
-          <MenuIcon />
-        </IconButton>
+          {/* 右側のPC用ナビゲーション（スマホでは非表示） */}
+          <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 2 }}>
+            <Button color="inherit" href="#contact">CONTACT</Button>
+            <Button color="inherit" href="#home">HOME</Button>
+          </Box>
 
-        {/* ドロワーメニュー（スライドするサイドメニュー） */}
-        <Drawer anchor="right" open={open} onClose={handleDrawerClose}>
-          <List sx={{ width: 250 }}>
-            {['Home', 'About', 'Works', 'Contact'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton onClick={handleDrawerClose} href={`#${text.toLowerCase()}`}>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Drawer>
-      </Toolbar>
-    </AppBar>
+          {/* スマホ用のハンバーガーメニュー（PCでは非表示） */}
+          <IconButton
+            color="inherit"
+            aria-label="menu"
+            sx={{ display: { xs: 'block', sm: 'none' } }}
+            onClick={handleDrawerOpen}
+          >
+            <MenuIcon />
+          </IconButton>
+
+          {/* ドロワーメニュー（スライドするサイドメニュー） */}
+          <Drawer anchor="right" open={open} onClose={handleDrawerClose}>
+            <List sx={{ width: 250 }}>
+              {['Home', 'About', 'Works', 'Contact'].map((text, index) => (
+                <ListItem key={text} disablePadding>
+                  <ListItemButton onClick={handleDrawerClose} href={`#${text.toLowerCase()}`}>
+                    <ListItemText primary={text} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+          </Drawer>
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }
