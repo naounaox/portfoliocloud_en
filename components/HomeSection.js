@@ -74,10 +74,10 @@ export default function HomeSection() {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 540 485"
         sx={{
-          height: { xs: 265, sm: 480, md: 660 }, // デバイスごとの高さ
+          height: { xs: 315, sm: 500, md: 660 }, // デバイスごとの高さ
           width: 'auto', // 横幅は自動調整
-          marginTop: { xs: 0, sm: 6, md: 10 }, // 上の余白
-          marginBottom: { xs: 5, sm: 2, md: 20 }, // 下の余白
+          marginTop: { xs: 0, sm: 6, md: 15 }, // 上の余白
+          marginBottom: { xs: 7, sm: 15, md: 18 }, // 下の余白
           display: 'block', // 中央に配置するための設定
           marginLeft: 'auto',
           marginRight: 'auto',

@@ -21,7 +21,7 @@ export default function WorksSection() {
           gutterBottom
           sx={{
           fontFamily: "Luckiest Guy", // フォントをLuckiest Guyに変更
-          fontSize: { xs: '3rem', sm: '5rem', md: '8rem' }, // 文字を大きく
+          fontSize: { xs: '3rem', sm: '5rem', md: '8rem', lg: '10rem' }, // 文字を大きく
           }}
           >
         WORKS
@@ -47,7 +47,10 @@ export default function WorksSection() {
             alt="aewasongs.com thumbnail"
           />
           <CardContent>
-          <Typography variant="h3" sx={{ fontFamily: "Montserrat, sans-serif" }}>aewasongs.com</Typography>
+          <Typography variant="h3" sx={{
+      fontFamily: "Montserrat, sans-serif",
+      fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' }, // デバイス幅ごとの文字サイズ
+    }}>aewasongs.com</Typography>
             <Typography variant="body2" color="#202020" sx={{ mt: 1, fontFamily: "Montserrat, sans-serif"}}>
             　A website showcasing my music activities, built using React and Next.js.
             </Typography>
@@ -69,7 +72,10 @@ export default function WorksSection() {
           <Grid item xs={12} sm={6}>
             <Card sx={{ boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", textAlign: "center", backgroundColor: "transparent", p: 2 }}>
               <CardContent>
-              <Typography variant="h4" sx={{ fontFamily: "Montserrat, sans-serif" }}>GitHub Repository</Typography>
+              <Typography variant="h4" sx={{
+      fontFamily: "Montserrat, sans-serif",
+      fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' }, // デバイス幅ごとの文字サイズ
+    }}>GitHub Repository</Typography>
                 <Typography variant="body2" color="#202020" sx={{ mt: 1, fontFamily: "Montserrat, sans-serif"}}>
                   Check out the project code here.
                 </Typography>
@@ -90,7 +96,10 @@ export default function WorksSection() {
           <Grid item xs={12} sm={6}>
             <Card sx={{ boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", textAlign: "center", backgroundColor: "transparent", p: 2 }}>
               <CardContent>
-              <Typography variant="h4" sx={{ fontFamily: "Montserrat, sans-serif" }}>Fiverr</Typography>
+              <Typography variant="h4" sx={{
+      fontFamily: "Montserrat, sans-serif",
+      fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' }, // デバイス幅ごとの文字サイズ
+    }}>Fiverr</Typography>
                 <Typography variant="body2" color="#202020" sx={{ mt: 1, fontFamily: "Montserrat, sans-serif"}}>
                  You can request work from me here.
                 </Typography>
